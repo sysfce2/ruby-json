@@ -1,6 +1,7 @@
 # Changes
 
 * Numerous performance optimizations in `JSON.generate` and `JSON.dump`.
+* Limit the size of ParserError exception messages, only include up to 32 bytes of the unparseable source.
 * Fix json-pure's `Object#to_json` to accept non state arguments 
 * Fix multiline comment support in `json-pure`.
 * Fix `JSON.parse` to no longer mutate the argument encoding when passed an ASCII-8BIT string.
@@ -291,8 +292,7 @@
 
 ## 2011-06-20 (1.5.3)
   * Alias State#configure method as State#merge to increase duck type synonymy with Hash.
-	* Add `as_json` methods in json/add/core, so rails can create its json objects
-	  the new way.
+  * Add `as_json` methods in json/add/core, so rails can create its json objects the new way.
 
 ## 2011-05-11 (1.5.2)
   * Apply documentation patch by Cory Monty <cory.monty@gmail.com>.
